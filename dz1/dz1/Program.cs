@@ -7,7 +7,9 @@ namespace dz
         static void Main(string[] args)
         {
             Dz1 d = new Dz1();
-            d.Dz1_1();
+            //d.Dz1_1();
+            d.HeronTriangleArea();
+            Console.ReadKey();
         }
     }
     public class Dz1
@@ -32,9 +34,35 @@ namespace dz
             Console.WriteLine("Введите число");
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine($"В этом числе {a.ToString().Length} цифр");
-            Console.ReadKey();
+            
+        }
+        public void HeronTriangleArea()
+        {
+            Console.WriteLine($"Вычисление площади треуольника по трем сторонам {Environment.NewLine} Введите стороны треугольника:");
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+            if (!checkTiangleData(a, b, c))
+            {
+                return;
+            }
+
+            double p = (a + b + c) / 2;
+            double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            Console.WriteLine($"Площадь треугольника равна {s}");
+
+        }
+        private bool checkTiangleData(double a, double b, double c)
+        {
+            if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a)
+            {
+                Console.WriteLine("Такого треугольника не может быть");
+                return false;
+            }
+            return true;
+
+
         }
 
     }
-
 }
