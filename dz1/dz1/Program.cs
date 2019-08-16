@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace dz
 {
@@ -8,7 +9,8 @@ namespace dz
         {
             Dz1 d = new Dz1();
             //d.Dz1_1();
-            d.HeronTriangleArea();
+            //d.HeronTriangleArea();
+            d.UserProfile();
             Console.ReadKey();
         }
     }
@@ -61,6 +63,35 @@ namespace dz
             }
             return true;
 
+
+        }
+        public void UserProfile()
+        {
+            StringBuilder profile = new StringBuilder("Your profile:");
+            profile.AppendLine();
+            Console.WriteLine("ВВедите фамилию");
+            profile.Append("Full Name: ");
+            profile.Append(Console.ReadLine());
+            Console.WriteLine("ВВедите имя");
+            profile.AppendLine(", " +Console.ReadLine());
+
+            Console.WriteLine("ВВедите возраст");
+            profile.Append("Age: ");
+            int age = int.Parse(Console.ReadLine());
+            profile.AppendLine(age.ToString());
+            Console.WriteLine("ВВедите вес(кг)");
+            profile.Append("Weight: ");
+            double weight = double.Parse(Console.ReadLine());
+            profile.AppendLine(weight.ToString());
+            Console.WriteLine("Введите рост(м)");
+            profile.Append("Height: ");
+            double height = double.Parse(Console.ReadLine());
+            profile.AppendLine(height.ToString());
+            double imt = (weight / (height * height));
+            profile.AppendLine("Body Mass Index: " + imt.ToString());
+
+            Console.WriteLine(profile);
+           
 
         }
 
