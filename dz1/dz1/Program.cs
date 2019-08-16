@@ -7,10 +7,11 @@ namespace dz
     {
         static void Main(string[] args)
         {
-            Dz1 d = new Dz1();
+            //Dz1 d = new Dz1();
+            Dz2 d = new Dz2();
             //d.Dz1_1();
             //d.HeronTriangleArea();
-            d.UserProfile();
+            d.Max();
             Console.ReadKey();
         }
     }
@@ -77,6 +78,7 @@ namespace dz
 
             Console.WriteLine("ВВедите возраст");
             profile.Append("Age: ");
+            
             int age = int.Parse(Console.ReadLine());
             profile.AppendLine(age.ToString());
             Console.WriteLine("ВВедите вес(кг)");
@@ -95,5 +97,17 @@ namespace dz
 
         }
 
+    }
+
+    public class Dz2
+    {
+        public void Max()
+        {
+            Console.WriteLine("Введите число:");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("И еще одно:");
+            int y = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Максимальное число: {Math.Max(x,y)}");
+        }
     }
 }
