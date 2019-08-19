@@ -3,18 +3,6 @@ using System.Text;
 
 namespace dz
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            //Dz1 d = new Dz1();
-            Dz2 d = new Dz2();
-            //d.Dz1_1();
-            //d.HeronTriangleArea();
-            d.Max();
-            Console.ReadKey();
-        }
-    }
     public class Dz1
     {
         public void Dz1_1()
@@ -97,17 +85,5 @@ namespace dz
 
         }
 
-    }
-
-    public class Dz2
-    {
-        public void Max()
-        {
-            Console.WriteLine("Введите число:");
-            int x = int.Parse(Console.ReadLine());
-            Console.WriteLine("И еще одно:");
-            int y = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Максимальное число: {Math.Max(x,y)}");
-        }
     }
 }
