@@ -12,11 +12,16 @@ namespace dz
             //d.Dz1_1();
             //d.HeronTriangleArea();
 
-            Dz3 d3 = new Dz3();
+            //Dz3 d3 = new Dz3();
             //d3.Fibonachi();
             //d3.Mean();
             //d3.Factorial();
-            d3.Authefication();
+            //d3.Authefication();
+
+
+            Dz4 d4 = new Dz4();
+            d4.RomanNumeralsParser();
+
             Console.ReadKey();
         }
     }
