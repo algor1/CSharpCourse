@@ -15,7 +15,8 @@ namespace dz
             Dz3 d3 = new Dz3();
             //d3.Fibonachi();
             //d3.Mean();
-            d3.Factorial();
+            //d3.Factorial();
+            d3.Authefication();
             Console.ReadKey();
         }
     }

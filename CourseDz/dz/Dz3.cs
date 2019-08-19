@@ -30,6 +30,44 @@ namespace dz
                 Console.Write(fionachi[i]+" ");
             }
         }
+
+        public void Authefication()
+        {
+            string login;
+            string password;
+            int i = 0;
+            do
+            {
+                i++;
+                Console.WriteLine("Enter your login:");
+                login = Console.ReadLine();
+                Console.WriteLine("Enter your password:");
+                password = Console.ReadLine();
+                if (CheckLogin(login, password))
+                {
+                    Console.WriteLine("Access granted");
+                    break;
+                }
+
+
+            }while (i<3);
+            if (i >= 3)
+            {
+                Console.WriteLine("Access denied");
+            }
+
+        }
+
+        private bool CheckLogin(string login,string password)
+        {
+            if (login != "igor" || password != "qwe")
+            {
+                return false;
+            }
+            return true;
+        }
+
+
         public void Mean()
         {
             Console.WriteLine("Введите несколько целых чисел, но не более 10. Для прерывания последовательности введите 0" );
