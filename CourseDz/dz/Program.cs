@@ -11,7 +11,8 @@ namespace dz
             Dz3 d = new Dz3();
             //d.Dz1_1();
             //d.HeronTriangleArea();
-            d.Fibonachi();
+            //d.Fibonachi();
+            d.Mean();
             Console.ReadKey();
         }
     }

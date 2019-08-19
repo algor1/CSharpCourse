@@ -30,5 +30,26 @@ namespace dz
                 Console.Write(fionachi[i]+" ");
             }
         }
+        public void Mean()
+        {
+            Console.WriteLine("Введите несколько целых чисел, но не более 10. Для прерывания последовательности введите 0" );
+            int sum = 0;
+            int number = 0;
+            double mean = 0;
+            for (int i = 0; i < 10; i++)
+            {
+               
+                number = int.Parse(Console.ReadLine());
+                if (number == 0)
+                {
+                    break;
+                }
+                sum += number;
+                mean = (double)sum / ((double)i + 1);
+
+            }
+            Console.WriteLine($"Среднее значение = {mean}");
+
+        }
     }
 }
