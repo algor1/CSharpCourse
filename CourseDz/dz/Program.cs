@@ -8,11 +8,14 @@ namespace dz
         {
             //Dz1 d = new Dz1();
             //Dz2 d = new Dz2();
-            Dz3 d = new Dz3();
+
             //d.Dz1_1();
             //d.HeronTriangleArea();
-            //d.Fibonachi();
-            d.Mean();
+
+            Dz3 d3 = new Dz3();
+            //d3.Fibonachi();
+            //d3.Mean();
+            d3.Factorial();
             Console.ReadKey();
         }
     }

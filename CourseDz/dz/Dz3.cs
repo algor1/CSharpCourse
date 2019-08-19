@@ -51,5 +51,20 @@ namespace dz
             Console.WriteLine($"Среднее значение = {mean}");
 
         }
+        public void Factorial()
+        {
+            Console.WriteLine("Calulate factorial of (enter number) :");
+            int value = 1;
+            int number = int.Parse(Console.ReadLine());
+            if (number==0)
+            {
+                value = 1;
+            }
+            for (int i = 1; i <= number; i++)
+            {
+                value *= i;
+            }
+            Console.WriteLine($"{number}! = {value}");
+        }
     }
 }
