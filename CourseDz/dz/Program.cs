@@ -19,9 +19,10 @@ namespace dz
             //d3.Authefication();
 
 
-            Dz4 d4 = new Dz4();
-            d4.RomanNumeralsParser();
-
+            //Dz4 d4 = new Dz4();
+            //d4.RomanNumeralsParser();
+            Console.WriteLine(Calculator.HeronTriangleArea(3, 3, 3));
+            Console.WriteLine(Calculator.HeronTriangleArea(3, 3, 3d));
             Console.ReadKey();
         }
     }
