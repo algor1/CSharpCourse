@@ -29,6 +29,20 @@ namespace dz
             Complex result = c1.Plus(c2);
             Console.WriteLine(result);
             Console.WriteLine(c1.Substruct(c2));
+
+            MyStack<int> ms = new MyStack<int>();
+
+            for (int i = 0; i < 1000; i++)
+            {
+                ms.Push(i);
+            }
+            
+           
+
+            Console.WriteLine(ms.Peek());
+            Console.WriteLine(ms.Pop());
+            Console.WriteLine(ms.Peek());
+
             Console.ReadKey();
         }
     }
