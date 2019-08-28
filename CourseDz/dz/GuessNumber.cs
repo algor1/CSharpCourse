@@ -34,7 +34,9 @@ namespace dz
                 lastRangeMin = 0;
                 lastRangeMax = maxNumber;
                 lastNumber = 0;
-                Console.WriteLine($"Think up a number from 0 to {maxNumber}");
+                Console.WriteLine($"Think up a number from 0 to {maxNumber} and I will guess it");
+                Console.WriteLine("Press a key when ready");
+                Console.ReadKey();
             }
             else
             {
@@ -44,7 +46,7 @@ namespace dz
             Game();
         }
 
-            public void Game()
+        public void Game()
         {
 
             for (int i = 0; i < maxTurns; i++)
@@ -97,7 +99,7 @@ namespace dz
 
         private int AskHuman()
         {
-            Console.WriteLine($"Enter number from 0 to {maxNumber} ");
+            Console.WriteLine($"Guess number from 0 to {maxNumber} ");
             int number;
             while (!int.TryParse(Console.ReadLine(), out number)&&number>100&&number<0){
                 Console.WriteLine("Wrong number!");
