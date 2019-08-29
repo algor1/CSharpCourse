@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using dz.UITicTacToe;
 
 namespace dz
 {
@@ -47,11 +49,19 @@ namespace dz
             //Console.WriteLine(ms.Pop());
             //Console.WriteLine(ms.Peek());
 
-            GuessNumber guessNumber = new GuessNumber(100, 5, Player.Human);
-            guessNumber.Start();
-            GuessNumber guessNumber1 = new GuessNumber(100, 5, Player.Machine);
-            guessNumber1.Start();
+            //GuessNumber guessNumber = new GuessNumber(100, 5, Player.Human);
+            //guessNumber.Start();
+            //GuessNumber guessNumber1 = new GuessNumber(100, 5, Player.Machine);
+            //guessNumber1.Start
+
+            var game = new TicTacToe();
+            var ui = new UITicTacToe.UITicTakToe(game);
+            
             Console.ReadKey();
+
+
         }
+
+       
     }
 }
