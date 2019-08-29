@@ -33,7 +33,7 @@ namespace dz.UITicTacToe
         {
             for (int i = 0; i <8 ; i++)
             {
-                switch (SameState(checkIndexes[i,1],checkIndexes[i,2],checkIndexes[i,3]))
+                switch (SameState(checkIndexes[i,0],checkIndexes[i,1],checkIndexes[i,2]))
                 {
                     case State.X:
                         return Winner.Crosses;
@@ -48,9 +48,9 @@ namespace dz.UITicTacToe
 
         private State SameState(int v1, int v2, int v3)
         {
-            if (board[v1] == board[v2] && board[v1] == board[v3])
+            if (GetState(v1) == GetState(v2) && GetState(v1) == GetState(v3))
             {
-                return board[v1];
+                return GetState(v1);
             }
             return State.Unset;
 
