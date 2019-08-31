@@ -20,7 +20,7 @@ namespace dz.UITicTacToe
 
                 int index;
                 Console.WriteLine("Make your move(type index)");
-                GetBoard();
+                Console.WriteLine(GetBoard());
                 index = int.Parse(Console.ReadLine());
                 Game.MakeMove(index);
                 if (Game.GetWinner() != Winner.Unfinished) break;
