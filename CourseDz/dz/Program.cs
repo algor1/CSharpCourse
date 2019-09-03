@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 using System.Text;
 using dz.UITicTacToe;
 
@@ -54,14 +56,20 @@ namespace dz
             //GuessNumber guessNumber1 = new GuessNumber(100, 5, Player.Machine);
             //guessNumber1.Start
 
-            var game = new TicTacToe();
-            var ui = new UITicTacToe.UITicTakToe(game);
+            //var game = new TicTacToe();
+            //var ui = new UITicTacToe.UITicTakToe(game);
             
-            Console.ReadKey();
+
+
+
+
 
 
         }
 
-       
+
+
+
+
     }
 }
